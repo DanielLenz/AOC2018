@@ -5,7 +5,7 @@ from typing import List, Set, Dict
 
 def get_char_counts(word: str) -> Set[int]:
     c = Counter(word)
-    char_count = Set: set(c.values())
+    char_count = set(c.values())
 
     # We don't care about element that occur only
     # once, using try/except is an easy way to
@@ -20,9 +20,8 @@ def get_char_counts(word: str) -> Set[int]:
 
 def get_checksum(list_of_ids: List[str]) -> int:
     total_counts = dict() # type: Dict[int, int]
-
     for entry in list_of_ids:
-        char_counts = Set: get_char_counts(entry)
+        char_counts = get_char_counts(entry)
         # If an element occurs more than once, we save the
         # number of occurences
         for char_count in char_counts:
@@ -32,7 +31,7 @@ def get_checksum(list_of_ids: List[str]) -> int:
                 total_counts[char_count] = 1
 
     # The checksum is the product of all occurences > 1
-    checksum: int = np.multiply.reduce(list(total_counts.values()))
+    checksum = np.multiply.reduce(list(total_counts.values()))
 
     return checksum
 
