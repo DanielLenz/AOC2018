@@ -36,7 +36,7 @@ def get_checksum(list_of_ids: List[str]) -> int:
 
     return checksum
 
-def find_similar_ids(list_of_ids: List[str]):
+def find_similar_ids(list_of_ids: List[str]) -> str:
     length = len(list_of_ids[0])
 
     for i in range(length - 1):
